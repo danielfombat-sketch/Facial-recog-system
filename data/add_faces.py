@@ -9,4 +9,4 @@ while True:
     if k==ord('q'):
         break
     video.release()
-    cv2.destroy all widows()
+    cv2.destroy all windows()
