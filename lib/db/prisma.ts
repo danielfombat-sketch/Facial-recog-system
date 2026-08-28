@@ -1,3 +1,4 @@
+import { PrismaClient } from "@prisma/client";
 import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/lib/generated/prisma/client";
@@ -18,6 +19,7 @@ const globalForPrisma = globalThis as unknown as {
 
 export const prisma =
   globalForPrisma.prisma ??
+  new PrismaClient();
   new PrismaClient({
     adapter,
   });

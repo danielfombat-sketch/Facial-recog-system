@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useState } from "react";
+import FaceCamera from "../FaceCamera";
 
 interface FormData {
   firstName: string;
@@ -229,8 +230,9 @@ export default function RegisterInternForm() {
           {/* Face Registration */}
           <div className="rounded-lg border-2 border-dashed border-blue-300 bg-blue-50 p-6 text-center">
             <h2 className="text-lg font-semibold text-blue-700">
-              Face Registration
+              Register Face
             </h2>
+            <FaceCamera/>
 
             <p className="mt-2 text-sm text-gray-600">
               The intern's face will be registered once and used later for
